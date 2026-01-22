@@ -44,6 +44,8 @@ Solutions must be implemented in Python. Compiled languages (e.g., C++) may be a
 - **Webots R2025a** installed and working ([installation guide](https://cyberbotics.com/doc/guide/installation-procedure))
 - **Podman** (recommended) or Docker
 
+> **Note:** For Windows installation instructions, see [WINDOWS_INSTALLATION.md](WINDOWS_INSTALLATION.md)
+
 ## Quick Start
 
 ### Option A: Automatic Setup (Recommended)
