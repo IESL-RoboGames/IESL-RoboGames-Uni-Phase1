@@ -21,7 +21,7 @@ from typing import List, Union
 if sys.platform.startswith("win"):
     WEBOTS_HOME = "C:\\Program Files\\Webots"
 elif sys.platform.startswith("darwin"):
-    WEBOTS_HOME = "/Applications/Webots.app"
+    WEBOTS_HOME = "/Applications/Webots.app/Contents"
 elif sys.platform.startswith("linux"):
     WEBOTS_HOME = "/usr/local/webots"
 else:

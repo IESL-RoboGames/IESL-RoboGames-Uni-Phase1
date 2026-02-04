@@ -72,7 +72,7 @@ master.mav.command_long_send(
 ## Camera Interface (TCP Stream)
 
 ### Overview
-The camera streams grayscale video over a TCP connection using a simple binary protocol.
+The camera streams color video over a TCP connection using a simple binary protocol.
 
 ### Connection Details
 - **Protocol**: TCP
@@ -89,7 +89,10 @@ Each frame consists of:
    - Bytes 2-3: Height (unsigned short, little-endian)
 
 2. **Payload** (width × height bytes):
-   - Grayscale pixel data (1 byte per pixel)
+   - color pixel data (3 byte per pixel)
    - Row-major order (left to right, top to bottom)
 
 ---
+### Revision History
+
+- 2026-02-04: Camera stream changed to color (3 bytes per pixel) — not grayscale; payload and documentation updated accordingly.

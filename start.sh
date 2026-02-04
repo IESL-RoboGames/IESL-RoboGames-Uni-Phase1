@@ -23,12 +23,19 @@ fi
 # Start containers with the appropriate tool
 if command -v podman-compose &> /dev/null; then
     echo "⬇️  Pulling latest images with podman-compose..."
-    podman-compose pull
+    if ! podman-compose pull 2>&1; then
+        echo "⚠️  Warning: Failed to pull images. Building locally..."
+        podman-compose build
+    fi
     echo "📦 Starting with podman-compose..."
     podman-compose up -d
 elif command -v docker &> /dev/null; then
     echo "⬇️  Pulling latest images with docker compose..."
-    docker compose pull
+    if ! docker compose pull 2>&1; then
+        echo "⚠️  Warning: Failed to pull images. This might be due to architecture incompatibility."
+        echo "Building images locally..."
+        docker compose build
+    fi
     echo "🐳 Starting with docker compose..."
     docker compose up -d
 else

@@ -2,9 +2,9 @@ services:
   # Webots vehicle controller service
   webots-controller:
     # Uncomment to build locally instead of using pre-built image
-    # build:
-    #   context: .
-    #   dockerfile: controller.dockerfile
+    build:
+      context: .
+      dockerfile: controller.dockerfile
     image: ghcr.io/iesl-robogames/webots-controller:latest
     container_name: webots-controller
     restart: unless-stopped
@@ -31,9 +31,9 @@ services:
   # ArduPilot SITL service with noVNC
   ardupilot-sitl:
     # Uncomment to build locally instead of using pre-built image
-    # build:
-    #   context: .
-    #   dockerfile: ardupilot.dockerfile
+    build:
+      context: .
+      dockerfile: ardupilot.dockerfile
     image: ghcr.io/iesl-robogames/ardupilot-sitl:latest
     container_name: ardupilot-sitl
     restart: unless-stopped

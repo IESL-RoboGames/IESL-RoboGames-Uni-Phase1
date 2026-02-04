@@ -46,6 +46,10 @@ Solutions must be implemented in Python. Compiled languages (e.g., C++) may be a
 
 > **Note:** For Windows installation instructions, see [WINDOWS_INSTALLATION.md](WINDOWS_INSTALLATION.md)
 
+> **Note (2026-02-04): macOS support**
+>
+> After the 2025-02-04 revision, `start.sh` is supported on macOS. On macOS, install required dependencies and configure environment variables before running `start.sh` (`setup.sh` still not supporting).
+
 ## Quick Start
 
 ### Option A: Automatic Setup (Recommended)
@@ -271,3 +275,10 @@ podman-compose build --no-cache
 **Quick fixes:**
 - **Connection refused?** → Wait for SITL to fully initialize (~30 seconds)
 - **Webots not finding controller?** → Check `.env` paths match your installation
+## Revision History
+
+| Date | Notes |
+|------|-------|
+| 2026-02-04 | Added macOS start.sh note and small documentation fixes. |
+
+You can track more detailed changes in the repository commit history.
