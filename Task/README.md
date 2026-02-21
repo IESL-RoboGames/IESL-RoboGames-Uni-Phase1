@@ -88,11 +88,7 @@ Each frame consists of:
    - Bytes 0-1: Width (unsigned short, little-endian)
    - Bytes 2-3: Height (unsigned short, little-endian)
 
-2. **Payload** (width × height bytes):
+2. **Payload** (width × height pixels):
    - color pixel data (3 byte per pixel)
    - Row-major order (left to right, top to bottom)
 
----
-### Revision History
-
-- 2026-02-04: Camera stream changed to color (3 bytes per pixel) — not grayscale; payload and documentation updated accordingly.

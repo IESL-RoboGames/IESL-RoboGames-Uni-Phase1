@@ -1,0 +1,72 @@
+#VRML_SIM R2025a utf8
+# Curved Strip with path defined by spine
+# template language: javascript
+
+EXTERNPROTO "../protos/Extrusion.proto"
+
+PROTO CurveStrip [
+  field SFVec3f translation 0 0 0
+  field SFRotation rotation 0 0 1 0
+  field SFString name "solid"
+
+  field SFFloat length 1
+  field SFFloat width 0.1
+  field SFFloat thickness 0.005
+
+  field MFVec3f spine [
+    0 0 0.41
+    0 0.1 0.41
+    0 0.2 0.38
+    0 0.3 0.32
+    0 0.4 0.23
+    0 0.5 0.14
+    0 0.6 0.09
+    0 0.7 0.05
+    0 0.8 0.03
+    0 0.9 0.02
+    0 1 0.01
+  ]
+]
+{
+  %<
+    const L = fields.length.value;
+    const W = fields.width.value;
+    const T = fields.thickness.value;
+    const spineField = fields.spine.value;
+
+    let scaledSpine = '';
+    for (let i = 0; i < spineField.length; i++) {
+      const p = spineField[i];
+      scaledSpine += `${p.x} ${p.y * L} ${p.z * L}\n`;
+    }
+  >%
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    children [
+      Shape {
+        appearance Appearance {
+          material Material {
+            ambientIntensity 1
+            diffuseColor 1 1 0
+            emissiveColor 1 1 0
+            specularColor 0 0 0
+          }
+        }
+        geometry Extrusion {
+          crossSection [
+            %<= -W / 2 >% 0
+            %<=  W / 2 >% 0
+            %<=  W / 2 >% %<= T >%
+            %<= -W / 2 >% %<= T >%
+            %<= -W / 2 >% 0
+          ]
+          spine [
+            %<= scaledSpine >%
+          ]
+        }
+      }
+    ]
+  }
+}

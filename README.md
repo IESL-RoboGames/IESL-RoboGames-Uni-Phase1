@@ -2,7 +2,7 @@
 
 Run Iris quadcopter simulation with ArduPilot SITL + Webots 
 
-![Iris Quadcopter](.iris_modified.png)
+![Iris Quadcopter](Webots/worlds/.iris_Task_2.jpg)
 
 ## About This Repository
 
@@ -20,7 +20,13 @@ The drone configuration uses the same Iris quadcopter from ArduPilot's default e
 
 ## Your Task
 
-Create a control script to navigate the drone and complete the objectives described in the **initial task PDF**. 
+Create a control script to navigate the drone and complete the objectives described in the task [booklet](https://robo.cse.mrt.ac.lk/university) (Phase 2: Drone Airport Navigation). 
+
+### Phase 2 — Drone Airport Navigation (summary)
+
+- World: `Webots/worlds/iris_Task_2.wbt`
+- New task: Navigate the environment following the yellow guiding line and use AprilTags on landing pads to identify airports and landing status.
+- The solution must be implemented in Python at `Task/flight.py`. Evaluators will change the `Airports = []` variable in your script when testing.
 
 ### Implementation Options
 

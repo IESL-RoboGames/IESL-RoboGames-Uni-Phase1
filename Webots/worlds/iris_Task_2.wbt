@@ -4,10 +4,11 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Soil.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidBox.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/shapes/protos/TexturedBoxShape.proto"
 EXTERNPROTO "../protos/Iris.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Grass.proto"
+EXTERNPROTO "../protos/CurveStrip.proto"
 
 WorldInfo {
   title "Iris Ardupilot"
@@ -15,8 +16,8 @@ WorldInfo {
   FPS 20
 }
 Viewpoint {
-  orientation 0.07281751634577505 0.006093266936770644 -0.9973266673519113 1.536793187700743
-  position -2.6546474273949836 3.934969927502937 0.44478676864630096
+  orientation -0.04553246160058567 0.9861272845223173 0.1596238505400498 0.5632139273543915
+  position -13.474893589007404 -0.04807092375178046 8.581501580741683
   follow "Iris"
   followSmoothness 0.01
 }
@@ -28,7 +29,7 @@ Solid {
   children [
     Floor {
       size 8 8
-      appearance Soil {
+      appearance Grass {
       }
     }
   ]
@@ -38,13 +39,13 @@ Solid {
   }
 }
 Solid {
-  translation 2.7722860890323524 2.828168586199536 0.2036016636184056
+  translation 0.191359 1.64181 0.2
   rotation -0.585968582159661 0.4637834404671435 -0.6644890827321817 0.01379684869420462
   children [
     TexturedBoxShape {
       size 0.5 0.5 0.4
       textureUrl [
-        "../images/AprilTag-ID5.jpg"
+        "../images/103.png"
       ]
       textureMapping "default"
       faceColor 0.6 0.6 0.6
@@ -60,7 +61,6 @@ Solid {
     size 0.5 0.5 0.4
   }
   physics Physics {
-    mass 1
     centerOfMass [
       0 0 0
     ]
@@ -68,16 +68,15 @@ Solid {
       linear 1
     }
   }
-  angularVelocity 2.1929480197724495e-09 -3.5807816961457406e-09 -1.1714503028733647e-07
 }
 Solid {
-  translation 2.7822946295902162 -2.8326828038640444 0.2025632377280703
+  translation 2.84229 1.66768 0.2
   rotation 0.999998029082405 -2.9599705557341236e-05 0.0019851839115580753 0.010319660510955488
   children [
     TexturedBoxShape {
       size 0.5 0.5 0.4
       textureUrl [
-        "../images/AprilTag-tag36h11-ID7.png"
+        "../images/203.png"
       ]
       textureMapping "default"
       faceColor 0.6 0.6 0.6
@@ -93,7 +92,6 @@ Solid {
     size 0.5 0.5 0.4
   }
   physics Physics {
-    mass 1
     centerOfMass [
       0 0 0
     ]
@@ -101,10 +99,102 @@ Solid {
       linear 1
     }
   }
-  angularVelocity -1.834987170346957e-09 5.844118048395192e-13 -2.3256305324611556e-09
 }
 Solid {
-  translation -2.843647747578661 2.794427801120808 0.1999137507604863
+  translation -2.95771 -0.312858 0.2
+  rotation 0.999998029082405 -2.9599705557341236e-05 0.0019851839115580753 0.010319660510955488
+  children [
+    TexturedBoxShape {
+      size 0.5 0.5 0.4
+      textureUrl [
+        "../images/112.png"
+      ]
+      textureMapping "default"
+      faceColor 0.6 0.6 0.6
+      frontFace FALSE
+      backFace FALSE
+      leftFace FALSE
+      rightFace FALSE
+      bottomFace FALSE
+    }
+  ]
+  name "landing_pad_stand_4"
+  boundingObject DEF Landing_Pad Box {
+    size 0.5 0.5 0.4
+  }
+  physics Physics {
+    centerOfMass [
+      0 0 0
+    ]
+    damping Damping {
+      linear 1
+    }
+  }
+}
+Solid {
+  translation -1.30767 -2.50267 0.199382
+  rotation 0.999998029082405 -2.9599705557341236e-05 0.0019851839115580753 0.010319660510955488
+  children [
+    TexturedBoxShape {
+      size 0.5 0.5 0.4
+      textureUrl [
+        "../images/213.png"
+      ]
+      textureMapping "default"
+      faceColor 0.6 0.6 0.6
+      frontFace FALSE
+      backFace FALSE
+      leftFace FALSE
+      rightFace FALSE
+      bottomFace FALSE
+    }
+  ]
+  name "landing_pad_stand_5"
+  boundingObject DEF Landing_Pad Box {
+    size 0.5 0.5 0.4
+  }
+  physics Physics {
+    centerOfMass [
+      0 0 0
+    ]
+    damping Damping {
+      linear 1
+    }
+  }
+}
+Solid {
+  translation 2.82231 -2.49263 0.199485
+  rotation 0.999998029082405 -2.9599705557341236e-05 0.0019851839115580753 0.010319660510955488
+  children [
+    TexturedBoxShape {
+      size 0.5 0.5 0.4
+      textureUrl [
+        "../images/302.png"
+      ]
+      textureMapping "default"
+      faceColor 0.6 0.6 0.6
+      frontFace FALSE
+      backFace FALSE
+      leftFace FALSE
+      rightFace FALSE
+      bottomFace FALSE
+    }
+  ]
+  name "landing_pad_stand_6"
+  boundingObject DEF Landing_Pad Box {
+    size 0.5 0.5 0.4
+  }
+  physics Physics {
+    centerOfMass [
+      0 0 0
+    ]
+    damping Damping {
+      linear 1
+    }
+  }
+}
+Solid {
+  translation -3.18339 2.8368 0.199913
   rotation -0.003007170762922013 -0.0038899900202078695 -0.9999879123777674 0.0065680247193616054
   children [
     Shape {
@@ -130,15 +220,14 @@ Solid {
       linear 1
     }
   }
-  angularVelocity 8.914441843470496e-05 2.4012357961945065e-05 2.568295614841167e-08
 }
 Solid {
-  translation 1.0169 2.78305 -1.72543e-05
+  translation 2.4169 -2.49695 -0.000708057
   rotation 5.273220331722632e-05 0.999999997290281 5.136878910735384e-05 1.5708971326786452
   children [
     SolidBox {
-      translation 0 0 -1.04
-      size 0.01 0.1 5.2
+      translation 0 0 -1.61
+      size 0.01 0.1 4
       appearance PBRAppearance {
         baseColor 1 1 0
         roughness 0.5
@@ -149,12 +238,12 @@ Solid {
   name "Strip 1"
 }
 Solid {
-  translation 2.7869 -0.98695 -4.0694e-07
+  translation 2.8369 -1.96695 -1.54388e-06
   rotation 0.5773489358556708 -0.5773509358554485 -0.5773509358554485 -2.094395307179586
   children [
     SolidBox {
-      translation 0 0 0.99
-      size 0.01 0.1 5.2
+      translation 0 0 1.44
+      size 0.01 0.1 4
       appearance PBRAppearance {
         baseColor 1 1 0
         roughness 0.5
@@ -234,9 +323,7 @@ Wall {
   }
 }
 Iris {
-  hidden linearVelocity_0 -5.0389343000388615e-06 -8.679872836139417e-06 6.336631303057893e-05
-  hidden angularVelocity_0 -0.00048651351715533163 -0.00026515918200999697 -1.2657543645759903e-08
-  translation -2.857462150366864 2.8051797667138416 0.45490901643575954
+  translation -3.16652 2.8352 0.454866
   rotation -0.001427812281882783 -0.0027260567145111674 -0.9999952649722282 0.03205724923088541
   controller "<extern>"
   controllerArgs [
@@ -254,5 +341,127 @@ Iris {
       width 640
       height 480
     }
+  ]
+}
+CurveStrip {
+  translation 4.73702e-08 2.86 0.000999952
+  rotation 0.5773509358560258 -0.577349935856137 0.577349935856137 2.09439
+  name "curve_strip_1"
+  length 3
+}
+CurveStrip {
+  translation 0.340001 1.64 0.00099996
+  rotation 0.5773509358560258 0.577349935856137 0.577349935856137 -2.094395307179586
+  name "curve_strip_2"
+  length 2.5
+  spine [
+    0 0 0
+    0 0.05 0
+    0 0.1 0
+    0 0.15 0.01
+    0 0.214 0.064
+    0 0.256 0.149
+    0 0.33 0.238
+    0 0.406 0.312
+    0 0.464 0.335
+    0 0.494 0.345
+    0 0.5335 0.351
+    0 0.5785 0.356
+    0 0.636 0.355
+    0 0.702 0.354
+    0 0.78 0.345
+    0 0.837 0.33
+    0 0.913 0.28
+    0 0.967 0.23
+    0 0.997 0.16
+    0 0.998 0.088
+    0 1 0
+  ]
+}
+CurveStrip {
+  translation -1.35 -2.29 0.001
+  rotation 0.5773509358560258 0.577349935856137 0.577349935856137 -2.094395307179586
+  name "curve_strip_3"
+  length 4
+  spine [
+    0 0 0
+    0 0.007 0.082
+    0 0.022 0.138
+    0 0.064 0.211
+    0 0.131 0.29
+    0 0.213 0.35
+    0 0.309 0.36
+    0 0.399 0.368
+    0 0.47 0.378
+    0 0.532 0.405
+    0 0.59 0.43
+    0 0.628 0.471
+    0 0.653 0.535
+    0 0.69 0.607
+    0 0.715 0.69
+    0 0.735 0.756
+    0 0.765 0.839
+    0 0.815 0.908
+    0 0.872 0.962
+    0 0.941 0.997
+    0 1 1
+  ]
+}
+CurveStrip {
+  translation -2.81 -0.32 0.001
+  rotation 0.5773509358560258 0.577349935856137 0.577349935856137 -2.094395307179586
+  name "curve_strip_4"
+  length 3
+  spine [
+    0 0 0
+    0 0.05 0
+    0 0.1 0
+    0 0.154 0.006
+    0 0.213 0.016
+    0 0.27 0.027
+    0 0.331 0.036
+    0 0.403 0.052
+    0 0.459 0.066
+    0 0.523 0.083
+    0 0.591 0.1
+    0 0.658 0.115
+    0 0.732 0.139
+    0 0.79 0.169
+    0 0.845 0.203
+    0 0.896 0.247
+    0 0.937 0.312
+    0 0.976 0.383
+    0 0.992 0.439
+    0 1 0.509
+    0 1 0.58
+  ]
+}
+CurveStrip {
+  translation -2.98 -0.51 0.001
+  rotation 0.7071072811865696 -5.085752022387836e-09 0.7071062811861719 3.14159
+  name "curve_strip_5"
+  length 2
+  spine [
+    0 0 0
+    0 0.05 0
+    0 0.1 0
+    0 0.154 0.006
+    0 0.213 0.016
+    0 0.27 0.027
+    0 0.331 0.036
+    0 0.403 0.052
+    0 0.459 0.066
+    0 0.523 0.083
+    0 0.591 0.1
+    0 0.658 0.115
+    0 0.732 0.139
+    0 0.79 0.169
+    0 0.845 0.203
+    0 0.896 0.247
+    0 0.937 0.312
+    0 0.976 0.383
+    0 0.992 0.487
+    0 1 0.586
+    0 1 0.8
   ]
 }
