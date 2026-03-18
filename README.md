@@ -151,7 +151,7 @@ This script automatically:
 
 1. **Open Webots** and load the world:
    ```bash
-   webots Webots/worlds/iris_modified.wbt
+   webots Webots/worlds/iris_Task_2.wbt
    ```
    Press ▶ (Play) to start
 

@@ -56,7 +56,7 @@ ArduPilot SITL runs best on Linux. For Windows, use WSL2 or Cygwin.
 
 Once all components are installed:
 
-1. **Start Webots** → Open `iris_modified.wbt` → Set controller to `<extern>` → Press Play
+1. **Start Webots** → Open `iris_Task_2.wbt` → Set controller to `<extern>` → Press Play
 2. **Start ArduPilot SITL** (in WSL/Cygwin): `sim_vehicle.py -v ArduCopter -f webots-python --console --map`
 3. **Run Webots Controller** (in PowerShell): `python Webots\controller\ardupilot_vehicle_controller.py`
 4. **Run Your Script** (in PowerShell): `python Task\flight.py`

@@ -643,7 +643,7 @@ show_summary() {
     echo -e "     ${CYAN}./start.sh${NC}"
     echo ""
     echo "  2. Open Webots and load the world:"
-    echo -e "     ${CYAN}webots Webots/worlds/iris_modified.wbt${NC}"
+    echo -e "     ${CYAN}webots Webots/worlds/iris_Task_2.wbt${NC}"
     echo ""
     echo "  3. Run the control script (in a new terminal):"
     echo -e "     ${CYAN}source venv/bin/activate${NC}"
