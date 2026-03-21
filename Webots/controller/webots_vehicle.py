@@ -314,7 +314,7 @@ class WebotsArduVehicle():
 
                     # get image
                     if isinstance(camera, Camera):
-                        img = self.get_camera_gray_image()
+                        img = self.get_camera_image()
                     elif isinstance(camera, RangeFinder):
                         img = self.get_rangefinder_image()
 
